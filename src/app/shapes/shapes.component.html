@@ -1,0 +1,30 @@
+<div class="shape-container" style="overflow: hidden;">
+  <svg
+    class="svg-shapes"
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
+    viewBox="100 100 600 600"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <ng-container *ngFor="let item of list">
+      <circle
+        [attr.r]="item?.r"
+        [attr.cx]="item?.cx"
+        [attr.cy]="item?.cy"
+        [attr.stroke-width]="item?.strokeWidth"
+        [attr.stroke-dash-array]="item?.strokeDashArray"
+      ></circle>
+    </ng-container>
+  </svg>
+  <svg style="pointer-events: none">
+    <defs>
+      <linearGradient id="bggrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color: #E9336B" />
+        <stop
+          offset="100%"
+          style="stop-color: #ff8674"
+        />
+      </linearGradient>
+    </defs>
+  </svg>
+</div>
